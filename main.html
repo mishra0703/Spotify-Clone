@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <nav class="nav">
+        <div class="logo">
+            <img src="Logos/spotify.svg" alt="spotify logo" class="spotify-logo">
+            <img src="Logos/hamburger.svg" alt="" class="hamburger">
+            <img src="Logos/close.svg" alt="" class="close">
+        </div>
+        <div class="search_section">
+            <ul>
+                <li class="home"><img src="Logos/Home.svg" alt="Home"></li>
+                <li>
+                    <!-- <div class="search-bar">
+                        <img src="Logos/search.svg" alt="Search">
+                        <input type="text" class="search" placeholder="What do you want to listen" aria-label="Username"
+                            aria-describedby="basic-addon1">
+                    </div> -->
+
+                    <div class="search-bar">
+                        <div class="search-icon">
+                            <img src="Logos/search.svg" alt="">
+                        </div>
+                        <input type="text" class="search-input" placeholder="What do you want to listen to?"
+                            aria-label="Search" id="search?">
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+        <div class="profile">
+            <button class="signupbtn">Sign up</button>
+            <button class="loginbtn">Log In</button>
+        </div>
+    </nav>
+
+    <div class="main">
+        <div class="left">
+            <div class="library">
+                <div class="lib_left">
+                    <img src="Logos/library.svg" alt="">
+                    <h2>Your Library</h2>
+                </div>
+                <div class="lib_right">
+                    <h5><strong>+</strong> Create</h5>
+                </div>
+            </div>
+
+            <div class="songcards">
+                <ul>
+
+                </ul>
+            </div>
+
+            <div class="left_footer">
+                <div>
+                    <a href="https://www.spotify.com/in-en/legal/" target="_blank">
+                        <span>Legal</span>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="https://www.spotify.com/in-en/safetyandprivacy/" target="_blank">
+                        <span>Safety &amp; Privacy</span>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="https://www.spotify.com/in-en/legal/privacy-policy/" target="_blank">
+                        <span>Privacy Policy</span>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="https://www.spotify.com/in-en/legal/cookies-policy/" target="_blank">
+                        <span>Cookies</span>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3" target="_blank">
+                        <span>About Ads</span>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="https://www.spotify.com/in-en/accessibility/" target="_blank">
+                        <span>Accessibility</span>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="https://www.spotify.com/legal/cookies-policy/" target="_blank" rel="noopener">
+                        <span>Cookies</span>
+                    </a>
+                </div>
+
+                <div class="lang_button">
+                    <button>
+                        <img src="Logos/language.svg" alt="Language icon">
+                        <span>English</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="right">
+            <div class="right_nav">
+                <a href="">
+                    <h2>Your favourite Playlists</h2>
+                </a>
+                <a href=""><span>Show all</span></a>
+            </div>
+
+            <div class="card_container">
+
+
+            </div>
+
+            <div class="playbar">
+
+                <div class="seekbar">
+                    <div class="point">
+
+                    </div>
+                </div>
+
+                <div class="lowerbar">
+
+                    <div class="info">
+
+                    </div>
+
+                    <div class="control_buttons">
+                        <div class="prev">
+                            <img id="prev" src="Logos/previous.svg" alt="">
+                        </div>
+                        <div class="playbutton3">
+                            <img id="play" src="Logos/playbutton.svg" style="filter: invert(1);">
+                        </div>
+                        <div class="next">
+                            <img id="next" src="Logos/next.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="time_vol">
+                        <span class="timestamp"></span>
+                        <span class="volume">
+                            <img src="Logos/volume.svg" alt="" class="volumeicon">
+                            <div class="range">
+                                <!-- <input type="range" id="volumebar" value="20" > -->
+                                <input type="range" id="volumebar" value="20">
+                            </div>
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

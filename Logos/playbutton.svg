@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+    <!-- Outer Circle -->
+    <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
+    
+    <!-- Inner Triangle (Centered Play Icon) -->
+    <polygon points="10,8 16,12 10,16" stroke="white" stroke-width="2" fill="none" stroke-linejoin="round"/>
+</svg>
