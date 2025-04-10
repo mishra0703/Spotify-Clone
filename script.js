@@ -34,7 +34,7 @@ function formatTime(seconds) {
 
 async function getaudio(folder) {
   currfolder = folder;
-  let a = await fetch(`./${folder}`);
+  let a = await fetch(`/${folder}`);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -62,6 +62,7 @@ async function getaudio(folder) {
       .replaceAll("%20", " ")
       .replace(".mp3", "")
       .replace("128 Kbps", "")
+      .replace("320 Kbps", "")
       .replace("- (Raag.Fm)", "")
       .split(";")[0];
     let singer_name = song
@@ -104,7 +105,7 @@ async function getaudio(folder) {
 }
 
 const playmusic = (track, track_names, pause = false) => {
-  currentsong.src = `./${currfolder}/` + track;
+  currentsong.src = `/${currfolder}/` + track;
   if (!pause) {
     currentsong.play();
     play.src = "/Spotify Project/Logos/pause.svg";
@@ -117,7 +118,7 @@ const playmusic = (track, track_names, pause = false) => {
 async function displayalbum() {
   // console.log("Displaying album");
 
-  let a = await fetch(`./Spotify Project/Songs/`);
+  let a = await fetch(`/Spotify Project/Songs/`);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;

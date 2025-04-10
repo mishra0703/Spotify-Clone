@@ -492,7 +492,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 .card {
   background: transparent;
-  width: 140px !important; /* Override the inline style */
+  width: 138px !important; /* Override the inline style */
   height: 275px; /* Reduced height */
   border: none;
   padding: 8px;
@@ -688,7 +688,7 @@ input[type="range"]::-webkit-slider-thumb {
   }
 
   .card {
-    width: 140px !important;
+    width: 137px !important;
   }
 }
 
@@ -1115,7 +1115,8 @@ input[type="range"]::-webkit-slider-thumb {
   }
 
   .info {
-    left: 55px;
+    left: 22px;
+    max-width: 125px;
   }
 
   .timestamp {
@@ -1199,7 +1200,8 @@ input[type="range"]::-webkit-slider-thumb {
   }
 
   .info {
-    left: 55px;
+    left: 30px;
+    max-width: 100px;
   }
 
   .timestamp {
