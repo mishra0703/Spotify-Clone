@@ -108,7 +108,7 @@ const playmusic = (track, track_names, pause = false) => {
   currentsong.src = `/${currfolder}/` + track;
   if (!pause) {
     currentsong.play();
-    play.src = "/Spotify Project/Logos/pause.svg";
+    play.src = "./Logos/pause.svg";
   }
 
   document.querySelector(".info").innerHTML = track_names;
@@ -144,7 +144,7 @@ async function displayalbum() {
                                 stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <img src="/Spotify Project/Songs/${folder}/cover.jpg" alt="">
+                    <img src="./Songs/${folder}/cover.jpg" alt="">
                     <div class="card-body">
                         <h3 class="card-title">${response.Title}</h3>
                         <p class="card-text">${response.Description}</p>
@@ -163,7 +163,7 @@ async function displayalbum() {
       name_list = [];
 
       // Wait for the songs to be fetched
-      songs = await getaudio(`Spotify Project/Songs/${folder}`);
+      songs = await getaudio(`./Songs/${folder}`);
 
       // Note: name_list is already being populated inside the getaudio function
       // So no need to manually update it here
@@ -178,7 +178,7 @@ async function displayalbum() {
 }
 
 (async function main() {
-  await getaudio("Spotify Project/Songs/Honey Singh Hits");
+  await getaudio("./Songs/Honey Singh Hits");
 
   // Display all the albums on the page
   await displayalbum();
@@ -191,10 +191,10 @@ async function displayalbum() {
   play.addEventListener("click", () => {
     if (currentsong.paused) {
       currentsong.play();
-      play.src = "/Spotify Project/Logos/pause.svg";
+      play.src = "./Logos/pause.svg";
     } else {
       currentsong.pause();
-      play.src = "/Spotify Project/Logos/playbutton.svg";
+      play.src = "./Logos/playbutton.svg";
     }
   });
 
@@ -229,10 +229,10 @@ async function displayalbum() {
       // Toggle play/pause
       if (currentsong.paused) {
         currentsong.play();
-        play.src = "/Spotify Project/Logos/pause.svg";
+        play.src = "./Logos/pause.svg";
       } else {
         currentsong.pause();
-        play.src = "/Spotify Project/Logos/playbutton.svg";
+        play.src = "./Logos/playbutton.svg";
       }
     }
   });
