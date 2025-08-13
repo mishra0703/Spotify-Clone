@@ -118,7 +118,7 @@ const playmusic = (track, track_names, pause = false) => {
 async function displayalbum() {
   // console.log("Displaying album");
 
-  let a = await fetch(`/Spotify Project/Songs/`);
+  let a = await fetch(`./Songs/`);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -131,7 +131,7 @@ async function displayalbum() {
       let folder = e.href.split("/").slice(-2)[0].replaceAll("%20", " ");
 
       // Get metadata of the folder
-      let a = await fetch(`/Spotify Project/Songs/${folder}/info.json`);
+      let a = await fetch(`./Songs/${folder}/info.json`);
       let response = await a.json();
 
       cardContainer.innerHTML =
