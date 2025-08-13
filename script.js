@@ -118,7 +118,7 @@ const playmusic = (track, track_names, pause = false) => {
 async function displayalbum() {
   // console.log("Displaying album");
 
-  let a = await fetch(`Songs/`);
+  let a = await fetch(`/Spotify-Clone/Songs/`);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -131,7 +131,7 @@ async function displayalbum() {
       let folder = e.href.split("/").slice(-2)[0].replaceAll("%20", " ");
 
       // Get metadata of the folder
-      let a = await fetch(`Songs/${folder}/info.json`);
+      let a = await fetch(`/Spotify-Clone/Songs/${folder}/info.json`);
       let response = await a.json();
 
       cardContainer.innerHTML =
@@ -144,7 +144,7 @@ async function displayalbum() {
                                 stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <img src="Songs/${folder}/cover.jpg" alt="">
+                    <img src="/Spotify-Clone/Songs/${folder}/cover.jpg" alt="">
                     <div class="card-body">
                         <h3 class="card-title">${response.Title}</h3>
                         <p class="card-text">${response.Description}</p>
@@ -163,7 +163,7 @@ async function displayalbum() {
       name_list = [];
 
       // Wait for the songs to be fetched
-      songs = await getaudio(`Songs/${folder}`);
+      songs = await getaudio(`/Spotify-Clone/Songs/${folder}`);
 
       // Note: name_list is already being populated inside the getaudio function
       // So no need to manually update it here
@@ -178,7 +178,7 @@ async function displayalbum() {
 }
 
 (async function main() {
-  await getaudio("Songs/Honey Singh Hits");
+  await getaudio("/Spotify-Clone/Songs/Honey Singh Hits");
 
   // Display all the albums on the page
   await displayalbum();
